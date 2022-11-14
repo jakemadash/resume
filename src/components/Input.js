@@ -17,19 +17,11 @@ class Input extends React.Component {
     });
   };
 
-  onSubmitTask = (e) => {
-    e.preventDefault();
-    this.setState({
-      value: "",
-      id: uniqid(),
-    });
-  };
-
   render() {
     const { value } = this.state.value;
     return (
       <div>
-        <label htmlFor={this.props.label}></label>
+        <label htmlFor={this.props.label}>{this.props.label}:</label>
         <input
           onChange={this.handleChange}
           value={value}
