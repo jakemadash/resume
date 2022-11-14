@@ -11,10 +11,15 @@ class App extends React.Component {
   }
   render() {
     return (
-      <form>
-        <Input label='name' type='text' />
-      </form>
-    )
+      <div className="personal">
+        <h1>Personal Information</h1>
+        <form>
+          <Input label="name" type="text" />
+          <Input label="email" type="email" />
+          <Input label="phone" type="tel" />
+        </form>
+      </div>
+    );
   }
 }
 
