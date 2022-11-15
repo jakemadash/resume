@@ -1,9 +1,9 @@
 import React from "react";
-import Section from "./components/Section";
+import Personal from "./components/Personal";
 
 class App extends React.Component {
   render() {
-    return <Section title="Personal Information" />;
+    return <Personal />;
   }
 }
 

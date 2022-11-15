@@ -1,11 +1,11 @@
 import React from "react";
 import Input from "./Input";
 
-class Section extends React.Component {
+class Personal extends React.Component {
   render() {
     return (
       <div className="section">
-        <h1>{this.props.title}</h1>
+        <h1>Personal Information</h1>
         <form>
           <Input label="name" type="text" />
           <Input label="email" type="email" />
@@ -16,4 +16,4 @@ class Section extends React.Component {
   }
 }
 
-export default Section;
+export default Personal;
