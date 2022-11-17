@@ -21,12 +21,13 @@ class Input extends React.Component {
     const { value } = this.state.value;
     return (
       <div>
-        <label htmlFor={this.props.label}>{this.props.label}:</label>
+        <label htmlFor={this.props.label}></label>
         <input
           onChange={this.handleChange}
           value={value}
           type={this.props.type}
           id={this.props.label}
+          placeholder={this.props.label}
         />
       </div>
     );
