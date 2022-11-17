@@ -7,8 +7,8 @@ class Experience extends React.Component {
       <form>
         <Input label="company" type="text" />
         <Input label="position" type="text" />
-        <Input label="from" type="date" />
-        <Input label="to" type="date" />
+        from: <Input label="from" type="date" />
+        to: <Input label="to" type="date" />
         <textarea placeholder="job duties"></textarea>
       </form>
     );
