@@ -6,9 +6,11 @@ class Personal extends React.Component {
     return (
       <div className="section">
         <h3>Personal Information</h3>
-        <Input label="name" type="text" />
-        <Input label="email" type="email" />
-        <Input label="phone" type="tel" />
+        <Input label="Full Name" type="text" />
+        <Input label='Title' type='text' />
+        <Input label="Email" type="email" />
+        <Input label="Phone" type="tel" />
+        <textarea placeholder="About"></textarea>
       </div>
     );
   }

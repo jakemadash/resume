@@ -5,11 +5,13 @@ class Education extends React.Component {
   render() {
     return (
       <div className="section">
-        <Input label="institution" type="text" />
-        <Input label="degree" type="text" />
-        <Input label="subject" type="text" />
-        <Input label="start date" type="text" />
-        <Input label="end date" type="text" />
+        <Input label="Institution" type="text" />
+        <Input label="Degree" type="text" />
+        <Input label="Subject" type="text" />
+        <div>
+          <Input label="Start Date" type="text" />
+          <Input label="End Date" type="text" />
+        </div>
       </div>
     );
   }

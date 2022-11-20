@@ -28,7 +28,7 @@ class Input extends React.Component {
           type={this.props.type}
           id={this.props.label}
           placeholder={this.props.label}
-          className='input'
+          className="input"
         />
       </>
     );

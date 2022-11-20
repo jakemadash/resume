@@ -5,11 +5,13 @@ class Experience extends React.Component {
   render() {
     return (
       <div className="section">
-        <Input label="company" type="text" />
-        <Input label="position" type="text" />
-        <Input label="start date" type="text" />
-        <Input label="end date" type="text" />
-        <textarea placeholder="job duties"></textarea>
+        <Input label="Company" type="text" />
+        <Input label="Position" type="text" />
+        <textarea placeholder="Job Duties"></textarea>
+        <div>
+          <Input label="Start Date" type="text" />
+          <Input label=" End Date" type="text" />
+        </div>
       </div>
     );
   }

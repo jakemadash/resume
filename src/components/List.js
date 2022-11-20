@@ -44,24 +44,24 @@ class List extends React.Component {
     } else places = this.state.jobs;
     return (
       <>
-        <div className={this.props.label}>
+        <span className={this.props.label}>
           <h3>{this.props.label}</h3>
-          <div>
+          <span>
             {places.map((place) => {
               return (
-                <div key={place.id}>
+                <span key={place.id}>
                   {place.school || place.job}
                   <button
-                    className={this.props.label}
+                    className="remove"
                     onClick={(e) => this.remove(place, e)}
                   >
                     Remove
                   </button>
-                </div>
+                </span>
               );
             })}
-          </div>
-        </div>
+          </span>
+        </span>
         <button className={this.props.label} onClick={this.add}>
           Add
         </button>

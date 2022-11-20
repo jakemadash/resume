@@ -9,7 +9,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       keys: "",
-      values: [{value:''}],
+      values: [{ value: "" }],
     };
   }
   callBack = (componentData) => {
@@ -30,8 +30,11 @@ class App extends React.Component {
           <List label="Work History" place="jobs" />
           <Submit value={this.state.values} />
           <h3>Skills</h3>
-          <textarea></textarea>
-          <button onClick={this.whatever}>Save</button>
+          <textarea placeholder="Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."></textarea>
+          <br></br>
+          <div class="save">
+            <button onClick={this.whatever}>Save</button>
+          </div>
         </form>
         <div className="resume"></div>
       </div>
