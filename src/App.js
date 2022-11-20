@@ -1,65 +1,37 @@
 import React from "react";
 import Personal from "./components/Personal";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
-import List from "./components/EducationList";
-import uniqid from "uniqid";
+import List from "./components/List";
+import Submit from "./components/Submit";
+import "./style.css";
 
 class App extends React.Component {
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
     this.state = {
-      schools: [{ school: <Education />, id: uniqid() }],
-      jobs: [{ job: <Experience />, id: uniqid() }],
+      keys: "",
+      values: [{value:''}],
     };
   }
-  //   add = (e) => {
-  //     e.preventDefault();
-  //     if (e.target.classList.contains("education")) {
-  //       const newSchool = { school: <Education />, id: uniqid() };
-  //       this.setState({
-  //         schools: this.state.schools.concat(newSchool),
-  //       });
-  //     }
-  //   }
-  // }
-  //   remove(school, e) {
-  //     console.log(e, school);
-  //     e.preventDefault();
-  //     if (e.target.classList.contains("education")) {
-  //       this.setState({
-  //         schools: this.state.schools.filter((s) => s.id !== school.id),
-  //       });
-  //     }
-  //   }
+  callBack = (componentData) => {
+    this.setState({ values: componentData });
+  };
+
+  whatever = (e) => {
+    e.preventDefault();
+    const form = document.querySelector(".form");
+    this.setState({ values: form.elements });
+  };
   render() {
     return (
-      <div className="app">
-        <Personal />
-        <List label="Education" place="schools" />
-        <List label="Work History" place="jobs" />
-        {/* <div className="education">
-          <h1>Education</h1>
-          <div>
-            {this.state.schools.map((school) => {
-              return (
-                <div key={school.id}>
-                  {school.school}{" "}
-                  <button
-                    className="education"
-                    onClick={(e) => this.remove(school, e)}
-                  >
-                    Remove
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <button className="education" onClick={this.add}>
-          Add
-        </button> */}
+      <div className="container">
+        <form className="form" onChange={this.whatever}>
+          <Personal />
+          <List label="Education" place="schools" />
+          <List label="Work History" place="jobs" />
+          <Submit value={this.state.values} />
+          <button onClick={this.whatever}>Submit</button>
+        </form>
+        <div className="resume"></div>
       </div>
     );
   }

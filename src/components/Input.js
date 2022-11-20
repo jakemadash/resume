@@ -20,7 +20,7 @@ class Input extends React.Component {
   render() {
     const { value } = this.state.value;
     return (
-      <div>
+      <>
         <label htmlFor={this.props.label}></label>
         <input
           onChange={this.handleChange}
@@ -28,8 +28,9 @@ class Input extends React.Component {
           type={this.props.type}
           id={this.props.label}
           placeholder={this.props.label}
+          className='input'
         />
-      </div>
+      </>
     );
   }
 }

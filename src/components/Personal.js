@@ -5,12 +5,10 @@ class Personal extends React.Component {
   render() {
     return (
       <div className="section">
-        <h1>Personal Information</h1>
-        <form>
-          <Input label="name" type="text" />
-          <Input label="email" type="email" />
-          <Input label="phone" type="tel" />
-        </form>
+        <h2>Personal Information</h2>
+        <Input label="name" type="text" />
+        <Input label="email" type="email" />
+        <Input label="phone" type="tel" />
       </div>
     );
   }

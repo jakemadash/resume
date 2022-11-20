@@ -21,7 +21,7 @@ class List extends React.Component {
     } else {
       const newJob = { school: <Experience />, id: uniqid() };
       this.setState({
-        schools: this.state.jobs.concat(newJob),
+        jobs: this.state.jobs.concat(newJob),
       });
     }
   };
@@ -45,7 +45,7 @@ class List extends React.Component {
     return (
       <>
         <div className={this.props.label}>
-          <h1>{this.props.label}</h1>
+          <h2>{this.props.label}</h2>
           <div>
             {places.map((place) => {
               return (
