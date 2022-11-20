@@ -5,7 +5,7 @@ class Personal extends React.Component {
   render() {
     return (
       <div className="section">
-        <h2>Personal Information</h2>
+        <h3>Personal Information</h3>
         <Input label="name" type="text" />
         <Input label="email" type="email" />
         <Input label="phone" type="tel" />

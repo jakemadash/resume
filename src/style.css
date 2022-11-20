@@ -5,7 +5,7 @@
 
 .resume {
   height: 50rem;
-  width: 25rem; 
+  width: 25rem;
 }
 
 .resume,
@@ -14,17 +14,45 @@
   border-width: 0.1rem;
 }
 
-:root {
+:root,
+textarea {
   font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
 .form > * {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 40rem;
 }
 
 .form {
-    padding: 15px;
+  padding: 5px 15px 15px;
+  margin: 15px;
+  width: 30rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+    width: 20rem;
+    height: 1.5rem;
+    margin: 4px 0;
+}
+
+h3 {
+    margin: 10px 0;
+}
+
+button {
+    margin: 4px 0;
+}
+
+form > button:last-of-type {
+    height: 2rem;
+    font-size: 1rem;
+    margin: auto;
 }

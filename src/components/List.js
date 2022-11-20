@@ -45,12 +45,12 @@ class List extends React.Component {
     return (
       <>
         <div className={this.props.label}>
-          <h2>{this.props.label}</h2>
+          <h3>{this.props.label}</h3>
           <div>
             {places.map((place) => {
               return (
                 <div key={place.id}>
-                  {place.school || place.job}{" "}
+                  {place.school || place.job}
                   <button
                     className={this.props.label}
                     onClick={(e) => this.remove(place, e)}

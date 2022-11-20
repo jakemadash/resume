@@ -29,7 +29,9 @@ class App extends React.Component {
           <List label="Education" place="schools" />
           <List label="Work History" place="jobs" />
           <Submit value={this.state.values} />
-          <button onClick={this.whatever}>Submit</button>
+          <h3>Skills</h3>
+          <textarea></textarea>
+          <button onClick={this.whatever}>Save</button>
         </form>
         <div className="resume"></div>
       </div>
