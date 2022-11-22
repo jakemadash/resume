@@ -4,7 +4,7 @@ import Input from "./Input";
 class Personal extends React.Component {
   render() {
     return (
-      <div className="section">
+      <div className="personal">
         <h3>Personal Information</h3>
         <Input label="Full Name" type="text" />
         <Input label='Title' type='text' />
