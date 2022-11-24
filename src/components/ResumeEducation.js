@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 import React from "react";
 
 class ResumeEducation extends React.Component {

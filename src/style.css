@@ -97,18 +97,33 @@ button:hover {
   border-bottom: 2px solid;
 }
 
-.profile, .contact, .section {
+.header-right {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.profile,
+.contact,
+.section,
+.icons {
   display: flex;
   flex-direction: column;
 }
 
 .contact {
-  align-items: flex-end;
-  justify-content: center;
-  font-size: .8rem;
+  justify-content: flex-end;
+  font-size: 0.8rem;
+}
+
+.icons {
+  justify-content: flex-end;
 }
 
 img {
   height: 1rem;
-  margin: 5px;
+}
+
+p:first-of-type {
+  font-size: 0.9rem;
 }

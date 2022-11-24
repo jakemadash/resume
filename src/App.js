@@ -43,8 +43,8 @@ class App extends React.Component {
       <div className="container">
         <form className="form" onChange={this.whatever}>
           <Personal />
-          <List label="Education" place="schools" />
           <List label="Work History" place="jobs" />
+          <List label="Education" place="schools" />
           <h3>Skills</h3>
           <textarea
             placeholder="Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. 

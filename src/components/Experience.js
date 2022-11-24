@@ -10,7 +10,7 @@ class Experience extends React.Component {
         <textarea placeholder="Job Duties"></textarea>
         <div>
           <Input label="Start Date" type="text" />
-          <Input label=" End Date" type="text" />
+          <Input label="End Date" type="text" />
         </div>
       </div>
     );

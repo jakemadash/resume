@@ -1,5 +1,6 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
+import ResumeExperience from "./ResumeExperience";
 import ResumeEducation from "./ResumeEducation";
 import "../style.css";
 import Phone from "../images/phone.svg";
@@ -21,14 +22,14 @@ class Resume extends React.Component {
             <h1>{name.value || name.placeholder}</h1>
             <h3>{title.value || title.placeholder}</h3>
           </div>
-          <div className="contact">
-            <div>
+          <div className="header-right">
+            <div className="icons">
               <img src={Phone} alt="phone" />
-              {phone.value || phone.placeholder}
-            </div>
-            <div>
               <img src={Email} alt="email" />
-              {email.value || email.placeholder}
+            </div>
+            <div className="contact">
+              <div>{phone.value || "555-123-1234"}</div>
+              <div>{email.value || "example@domain.com"}</div>
             </div>
           </div>
         </div>
@@ -36,6 +37,7 @@ class Resume extends React.Component {
           {about.value ||
             "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
         </p>
+        <ResumeExperience jobs={jobs} />
         <ResumeEducation schools={schools} />
       </div>
     );
