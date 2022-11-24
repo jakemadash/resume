@@ -13,7 +13,7 @@ class List extends React.Component {
   }
   add = (e) => {
     e.preventDefault();
-    if (e.target.classList.contains("Education")) {
+    if (this.props.place === "schools") {
       const newSchool = { school: <Education />, id: uniqid() };
       this.setState({
         schools: this.state.schools.concat(newSchool),
@@ -27,7 +27,7 @@ class List extends React.Component {
   };
   remove(place, e) {
     e.preventDefault();
-    if (e.target.classList.contains("Education")) {
+    if (this.props.place === "schools") {
       this.setState({
         schools: this.state.schools.filter((s) => s.id !== place.id),
       });

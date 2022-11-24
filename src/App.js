@@ -12,15 +12,26 @@ class App extends React.Component {
     };
   }
 
-  whatever = (e) => {
-    e.preventDefault();
+  stateUpdate = () => {
     const form = document.querySelector(".form");
     this.setState({ formValues: form.elements });
   };
 
+  whatever = (e) => {
+    e.preventDefault();
+    this.stateUpdate();
+  };
+
   componentDidMount() {
-    const form = document.querySelector(".form");
-    this.setState({ formValues: form.elements });
+    this.stateUpdate();
+    const targetNode = document.querySelector(".form");
+    const observerOptions = {
+      childList: true,
+      subtree: true,
+    };
+
+    const observer = new MutationObserver(this.stateUpdate);
+    observer.observe(targetNode, observerOptions);
   }
 
   render() {
