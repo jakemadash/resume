@@ -26,7 +26,7 @@ class Input extends React.Component {
           onChange={this.handleChange}
           value={value}
           type={this.props.type}
-          id={this.props.label}
+          id={this.props.label.replace(/\s+/g, '')}
           placeholder={this.props.label}
           className="input"
         />

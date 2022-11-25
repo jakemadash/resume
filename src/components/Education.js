@@ -8,10 +8,8 @@ class Education extends React.Component {
         <Input label="Institution" type="text" />
         <Input label="Degree" type="text" />
         <Input label="Subject" type="text" />
-        <div>
-          <Input label="Start Date" type="text" />
-          <Input label="End Date" type="text" />
-        </div>
+        <Input label="Start Date" type="text" />
+        <Input label="End Date" type="text" />
       </div>
     );
   }

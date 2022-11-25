@@ -9,12 +9,24 @@ class ResumeExperience extends React.Component {
     const entries = [...this.props.jobs];
     return (
       <div>
+        <h3 className="work">Work History</h3>
         {entries.map((entry, index) => {
           const job = entry.children;
           return (
-            <span key={index}>
-              {job.Company.value || job.Company.placeholder}
-            </span>
+            <div key={index}>
+              <div className="work">
+                <div>{job.Position.value || job.Position.placeholder}</div>
+                <div>
+                  {job.Company.value || job.Company.placeholder} |{" "}
+                  {job.StartDate.value || job.StartDate.placeholder} -{" "}
+                  {job.EndDate.value || job.EndDate.placeholder}
+                </div>
+              </div>
+              <p>
+                  {job.JobDuties.value ||
+                    "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
+              </p>
+            </div>
           );
         })}
       </div>

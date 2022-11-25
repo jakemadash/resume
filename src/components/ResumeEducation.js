@@ -9,12 +9,13 @@ class ResumeEducation extends React.Component {
     const entries = [...this.props.schools]
     return (
       <div>
+        <h3 className='education'>Education</h3>
         {entries.map((entry, index) => {
           const school = entry.children;
               return (
-                <span key={index}>
-                  {school.Institution.value || school.Institution.placeholder}
-                </span>
+                <div key={index} className='education'>
+                  <div>{school.Institution.value || school.Institution.placeholder}</div>
+                </div>
               );
             })}
       </div>
