@@ -17,9 +17,24 @@ class App extends React.Component {
     this.setState({ formValues: form.elements });
   };
 
-  whatever = (e) => {
+  reveal() {
+    const edit = document.querySelector(".edit");
+    const color = document.querySelector(".color");
+    edit.removeAttribute("hidden");
+    color.removeAttribute("hidden");
+  }
+
+  collapse = (e) => {
     e.preventDefault();
-    this.stateUpdate();
+    const form = document.querySelector(".form");
+    const resume = document.querySelector(".resume-container");
+    const edit = document.querySelector(".edit");
+    const color = document.querySelector(".color");
+    form.classList.toggle("hidden");
+    edit.classList.toggle("hidden");
+    color.classList.toggle("hidden");
+    setTimeout(this.reveal, 1500);
+    resume.classList.toggle("slide");
   };
 
   componentDidMount() {
@@ -41,7 +56,7 @@ class App extends React.Component {
     } else resume = null;
     return (
       <div className="container">
-        <form className="form" onChange={this.whatever}>
+        <form className="form" onChange={this.stateUpdate}>
           <Personal />
           <List label="Work History" place="jobs" />
           <List label="Education" place="schools" />
@@ -53,10 +68,21 @@ class App extends React.Component {
           ></textarea>
           <br></br>
           <div className="save">
-            <button onClick={this.whatever}>Save</button>
+            <button onClick={this.collapse}>Save</button>
           </div>
         </form>
-        <div className="resume">{resume}</div>
+        <div className="resume-container">
+          <div className="hidden color">
+            <button id="gray"></button>
+            <button id="red"></button>
+            <button id="blue"></button>
+            <button id="green"></button>
+            <button id="yellow"></button>
+            <button id="purple"></button>
+          </div>
+          <div className="resume">{resume}</div>
+          <button className="hidden edit">Edit</button>
+        </div>
       </div>
     );
   }

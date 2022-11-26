@@ -5,10 +5,11 @@
 }
 
 .resume {
-  height: 45.6rem;
+  min-height: 37rem;
   width: 30rem;
   padding: 30px 50px 50px;
   color: rgb(72, 72, 72);
+  align-self: flex-start;
 }
 
 .resume,
@@ -33,6 +34,7 @@ textarea {
 .form {
   height: 100%;
   padding: 10px 30px 30px;
+  transition: opacity 1s;
 }
 
 input,
@@ -57,7 +59,8 @@ h3 {
 }
 
 h3.education,
-h3.work, .skills > h3 {
+h3.work,
+.skills > h3 {
   font-weight: 800;
   margin: 20px 0;
 }
@@ -71,7 +74,7 @@ button {
   height: 1.5rem;
 }
 
-button:hover {
+button:not(.color > *):hover {
   cursor: pointer;
   transform: scale(1.02);
   background-color: rgb(159, 215, 159);
@@ -118,7 +121,8 @@ button:hover {
   flex-direction: column;
 }
 
-.contact, .subject {
+.contact,
+.subject {
   font-size: 0.8rem;
 }
 
@@ -157,4 +161,77 @@ div.education {
 
 span {
   font-weight: 500;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.slide {
+  transform: translate(-50%);
+}
+
+.edit {
+  background-color: transparent;
+  font-size: 1rem;
+  border-width: 2px;
+}
+
+.edit, .color > * {
+  transition: opacity 1.5s 1s;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50px;
+}
+
+.color > * {
+  border-width: 0;
+}
+
+.color {
+  transition: opacity 1.5s 1s;
+  display: flex;
+  flex-direction: column;
+}
+
+.color > *:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+#gray {
+  background-color: rgb(72, 72, 72);
+}
+
+#red {
+  background-color: #E08D79;
+}
+
+#blue {
+  background-color: #73C1C6;
+}
+
+#green {
+  background-color: #7B9E87;
+}
+
+#purple {
+  background-color: #715e9f;
+}
+
+#yellow {
+  background-color: #FFC43D;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  gap: 10px;
+  transition: transform 1.5s;
 }
