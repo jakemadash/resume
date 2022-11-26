@@ -47,6 +47,7 @@ class App extends React.Component {
           <List label="Education" place="schools" />
           <h3>Skills</h3>
           <textarea
+            className="skills"
             placeholder="Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. 
           Aliquip quis excepteur et nostrud enim irure nostrud officia."
           ></textarea>

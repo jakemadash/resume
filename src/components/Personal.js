@@ -10,6 +10,7 @@ class Personal extends React.Component {
         <Input label='Title' type='text' />
         <Input label="Email" type="email" />
         <Input label="Phone" type="tel" />
+        <Input label='Location' type='text' />
         <textarea placeholder="About"></textarea>
       </div>
     );

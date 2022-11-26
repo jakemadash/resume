@@ -5,6 +5,7 @@ import ResumeEducation from "./ResumeEducation";
 import "../style.css";
 import Phone from "../images/phone.svg";
 import Email from "../images/email.svg";
+import Location from "../images/location.svg";
 
 class Resume extends React.Component {
   constructor(props) {
@@ -12,9 +13,10 @@ class Resume extends React.Component {
   }
   render() {
     const propsArray = [...this.props.values];
-    const [name, title, email, phone, about] = propsArray;
+    const [name, title, email, phone, location, about] = propsArray;
     const schools = document.querySelectorAll(".school");
     const jobs = document.querySelectorAll(".job");
+    const skills = document.querySelector(".skills");
     return (
       <div>
         <div className="header">
@@ -26,10 +28,12 @@ class Resume extends React.Component {
             <div className="icons">
               <img src={Phone} alt="phone" />
               <img src={Email} alt="email" />
+              <img src={Location} alt="location" />
             </div>
             <div className="contact">
               <div>{phone.value || "555-123-1234"}</div>
               <div>{email.value || "example@domain.com"}</div>
+              <div>{location.value || location.placeholder}</div>
             </div>
           </div>
         </div>
@@ -39,6 +43,13 @@ class Resume extends React.Component {
         </p>
         <ResumeExperience jobs={jobs} />
         <ResumeEducation schools={schools} />
+        <div className="skills">
+          <h3>Skills</h3>
+          <p>
+            {skills.value ||
+              "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
+          </p>
+        </div>
       </div>
     );
   }

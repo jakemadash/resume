@@ -8,6 +8,7 @@
   height: 45.6rem;
   width: 30rem;
   padding: 30px 50px 50px;
+  color: rgb(72, 72, 72);
 }
 
 .resume,
@@ -55,8 +56,10 @@ h3 {
   font-weight: 200;
 }
 
-h3.education, h3.work {
+h3.education,
+h3.work, .skills > h3 {
   font-weight: 800;
+  margin: 20px 0;
 }
 
 button {
@@ -98,7 +101,7 @@ button:hover {
 .header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid rgb(72, 72, 72);
 }
 
 .header-right {
@@ -115,13 +118,14 @@ button:hover {
   flex-direction: column;
 }
 
-.contact {
-  justify-content: flex-end;
+.contact, .subject {
   font-size: 0.8rem;
 }
 
-.icons {
+.icons,
+.contact {
   justify-content: flex-end;
+  gap: 5px;
 }
 
 img {
@@ -130,15 +134,27 @@ img {
 
 p {
   font-size: 0.9rem;
+  margin: 8px 0;
 }
 
-div.work, div.education {
+div.work,
+div.education {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
-  font-size: .9rem;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
 }
 
-div.work:first-child, div.education:first-child {
+.position,
+.degree {
   font-weight: 800;
+}
+
+.company,
+.institution {
+  color: rgb(165, 165, 165);
+}
+
+span {
+  font-weight: 500;
 }
