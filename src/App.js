@@ -2,6 +2,7 @@ import React from "react";
 import Personal from "./components/Personal";
 import List from "./components/List";
 import Resume from "./components/Resume";
+import Color from "./components/Color";
 import "./style.css";
 
 class App extends React.Component {
@@ -17,13 +18,6 @@ class App extends React.Component {
     this.setState({ formValues: form.elements });
   };
 
-  reveal() {
-    const edit = document.querySelector(".edit");
-    const color = document.querySelector(".color");
-    edit.removeAttribute("hidden");
-    color.removeAttribute("hidden");
-  }
-
   collapse = (e) => {
     e.preventDefault();
     const form = document.querySelector(".form");
@@ -33,7 +27,6 @@ class App extends React.Component {
     form.classList.toggle("hidden");
     edit.classList.toggle("hidden");
     color.classList.toggle("hidden");
-    setTimeout(this.reveal, 1500);
     resume.classList.toggle("slide");
   };
 
@@ -72,14 +65,7 @@ class App extends React.Component {
           </div>
         </form>
         <div className="resume-container">
-          <div className="hidden color">
-            <button id="gray"></button>
-            <button id="red"></button>
-            <button id="blue"></button>
-            <button id="green"></button>
-            <button id="yellow"></button>
-            <button id="purple"></button>
-          </div>
+          <Color />
           <div className="resume">{resume}</div>
           <button className="hidden edit">Edit</button>
         </div>

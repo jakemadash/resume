@@ -19,9 +19,9 @@ class Resume extends React.Component {
     const skills = document.querySelector(".skills");
     return (
       <div>
-        <div className="header">
+        <div className="header colored">
           <div className="profile">
-            <h1>{name.value || name.placeholder}</h1>
+            <h1 className="colored">{name.value || name.placeholder}</h1>
             <h3>{title.value || title.placeholder}</h3>
           </div>
           <div className="header-right">
@@ -44,7 +44,7 @@ class Resume extends React.Component {
         <ResumeExperience jobs={jobs} />
         <ResumeEducation schools={schools} />
         <div className="skills">
-          <h3>Skills</h3>
+          <h3 className="colored">Skills</h3>
           <p>
             {skills.value ||
               "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}

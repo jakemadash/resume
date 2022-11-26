@@ -9,7 +9,7 @@ class ResumeExperience extends React.Component {
     const entries = [...this.props.jobs];
     return (
       <div>
-        <h3 className="work">Work History</h3>
+        <h3 className="work colored">Work History</h3>
         {entries.map((entry, index) => {
           const job = entry.children;
           return (
