@@ -55,7 +55,7 @@ class App extends React.Component {
           <SaveEdit class="save" label="Save" />
         </form>
 
-        <div className="resume-container">
+        <div className="resume-container" id="">
           <Color />
           <div className="resume">{resume}</div>
           <SaveEdit class="edit hidden" label="Edit" />

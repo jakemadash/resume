@@ -3,15 +3,19 @@ import "../style.css";
 
 class Color extends React.Component {
   colorSwitch = (e) => {
-    const coloredElements = document.querySelectorAll(".colored");
-    const button = getComputedStyle(e.target);
-    const selectedColor = button.getPropertyValue("background-color");
-    coloredElements.forEach((element) => {
-      // header line
-      if (element.nodeName === "DIV") element.style.borderColor = selectedColor;
-      // text
-      else element.style.color = selectedColor;
-    });
+    // don't change color if container div clicked instead of button
+    if (e.target.nodeName === "BUTTON") {
+      const coloredElements = document.querySelectorAll(".colored");
+      const button = getComputedStyle(e.target);
+      const selectedColor = button.getPropertyValue("background-color");
+      coloredElements.forEach((element) => {
+        // header line
+        if (element.nodeName === "DIV")
+          element.style.borderColor = selectedColor;
+        // text
+        else element.style.color = selectedColor;
+      });
+    }
   };
 
   render() {

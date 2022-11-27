@@ -7,13 +7,27 @@ class SaveEdit extends React.Component {
     super(props);
   }
 
+  smallTransition(resume) {
+    const style = getComputedStyle(resume);
+    if (style.getPropertyValue("opacity")) {
+      if (resume.getAttribute("id") === "")
+        resume.setAttribute("id", "visible");
+      else resume.setAttribute("id", "");
+    }
+  }
+
   transition = (e) => {
     e.preventDefault();
     const form = document.querySelector(".form");
+    const formElements = document.querySelectorAll(".form *");
     const resume = document.querySelector(".resume-container");
     const edit = document.querySelector(".edit");
     const color = document.querySelector(".color");
+    this.smallTransition(resume);
     form.classList.toggle("hidden");
+    formElements.forEach((element) => {
+      element.toggleAttribute("disabled");
+    });
     edit.classList.toggle("hidden");
     color.classList.toggle("hidden");
     resume.classList.toggle("slide");

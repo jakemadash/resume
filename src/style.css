@@ -4,8 +4,7 @@
 }
 
 .resume {
-  min-height: 40rem;
-  width: 30rem;
+  min-height: 46rem;
   padding: 30px 50px 50px;
   color: rgb(72, 72, 72);
   align-self: flex-start;
@@ -17,7 +16,9 @@
   border-width: 0.1rem;
   background-color: white;
   margin: 5px;
-  max-width: 30rem;
+  width: 30rem;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 :root {
@@ -243,17 +244,35 @@ div.education,
 }
 
 @media (max-width: 950px) {
+  :root {
+    background-color: white;
+  }
+
   .container {
     flex-direction: column;
     justify-content: center;
+    margin: 0;
   }
 
   .form {
-    height: 100%; 
-    margin: auto; 
+    height: min-content; 
   }
 
-  .resume {
-    display: none;
+  .resume-container {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 1.5s 1s;
+  }
+
+  .resume,.form {
+    padding: 5px;
+    border: none;
+  }
+
+  #visible {
+    opacity: 1;
   }
 }
