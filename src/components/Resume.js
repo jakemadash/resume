@@ -35,16 +35,16 @@ class Resume extends React.Component {
         </div>
         <p>
           {about.value ||
-            "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
+            "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia. Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
         </p>
-        
+
         <ResumeExperience jobs={jobs} />
         <ResumeEducation schools={schools} />
         <div className="skills">
           <h3 className="colored">Skills</h3>
           <p>
             {skills.value ||
-              "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
+              "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia. Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
           </p>
         </div>
       </div>
