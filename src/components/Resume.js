@@ -37,6 +37,7 @@ class Resume extends React.Component {
           {about.value ||
             "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
         </p>
+        
         <ResumeExperience jobs={jobs} />
         <ResumeEducation schools={schools} />
         <div className="skills">

@@ -20,13 +20,16 @@ class SaveEdit extends React.Component {
   };
 
   render() {
+    // save button
     if (this.props.class === "save") {
       return (
         <div className={this.props.class}>
           <button onClick={this.transition}>{this.props.label}</button>
         </div>
       );
-    } else
+    }
+    // edit button
+    else
       return (
         <button className={this.props.class} onClick={this.transition}>
           {this.props.label}

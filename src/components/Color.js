@@ -6,11 +6,11 @@ class Color extends React.Component {
     const coloredElements = document.querySelectorAll(".colored");
     const button = getComputedStyle(e.target);
     const selectedColor = button.getPropertyValue("background-color");
-    console.log(selectedColor);
     coloredElements.forEach((element) => {
-      if (element.nodeName === "DIV") {
-        element.style.borderColor = selectedColor;
-      } else element.style.color = selectedColor;
+      // header line
+      if (element.nodeName === "DIV") element.style.borderColor = selectedColor;
+      // text
+      else element.style.color = selectedColor;
     });
   };
 

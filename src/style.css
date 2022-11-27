@@ -1,5 +1,4 @@
 .container {
-  display: flex;
   justify-content: center;
   margin-left: 50px;
 }
@@ -104,13 +103,11 @@ button:not(.color > *):hover {
 }
 
 .header {
-  display: flex;
   justify-content: space-between;
   border-bottom: 2px solid rgb(72, 72, 72);
 }
 
 .header-right {
-  display: flex;
   gap: 5px;
   margin-bottom: 10px;
 }
@@ -118,7 +115,8 @@ button:not(.color > *):hover {
 .profile,
 .contact,
 .section,
-.icons {
+.icons,
+.color {
   display: flex;
   flex-direction: column;
 }
@@ -145,7 +143,6 @@ p {
 
 div.work,
 div.education {
-  display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
   font-size: 0.9rem;
@@ -183,7 +180,8 @@ span {
   border-width: 2px;
 }
 
-.edit, .color > * {
+.edit,
+.color > * {
   transition: opacity 1.5s 1s;
   height: 3rem;
   width: 3rem;
@@ -196,8 +194,6 @@ span {
 
 .color {
   transition: opacity 1.5s 1s;
-  display: flex;
-  flex-direction: column;
 }
 
 .color > *:hover {
@@ -210,11 +206,11 @@ span {
 }
 
 #red {
-  background-color: #E08D79;
+  background-color: #e08d79;
 }
 
 #blue {
-  background-color: #73C1C6;
+  background-color: #73c1c6;
 }
 
 #green {
@@ -229,8 +225,16 @@ span {
   background-color: #f1af14;
 }
 
-.resume-container {
+.resume-container,
+div.work,
+div.education,
+.header,
+.header-right,
+.container {
   display: flex;
+}
+
+.resume-container {
   justify-content: center;
   align-items: center;
   width: min-content;

@@ -11,6 +11,7 @@ class List extends React.Component {
       jobs: [{ job: <Experience />, id: uniqid() }],
     };
   }
+
   add = (e) => {
     e.preventDefault();
     if (this.props.place === "schools") {
@@ -25,6 +26,7 @@ class List extends React.Component {
       });
     }
   };
+
   remove(place, e) {
     e.preventDefault();
     if (this.props.place === "schools") {
@@ -37,11 +39,13 @@ class List extends React.Component {
       });
     }
   }
+
   render() {
     let places = "";
     if (this.props.place === "schools") {
       places = this.state.schools;
     } else places = this.state.jobs;
+    
     return (
       <>
         <span className={this.props.label}>
