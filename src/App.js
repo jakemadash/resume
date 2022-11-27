@@ -2,6 +2,7 @@ import React from "react";
 import Personal from "./components/Personal";
 import List from "./components/List";
 import Resume from "./components/Resume";
+import SaveEdit from './components/SaveEdit'
 import Color from "./components/Color";
 import "./style.css";
 
@@ -16,18 +17,6 @@ class App extends React.Component {
   stateUpdate = () => {
     const form = document.querySelector(".form");
     this.setState({ formValues: form.elements });
-  };
-
-  collapse = (e) => {
-    e.preventDefault();
-    const form = document.querySelector(".form");
-    const resume = document.querySelector(".resume-container");
-    const edit = document.querySelector(".edit");
-    const color = document.querySelector(".color");
-    form.classList.toggle("hidden");
-    edit.classList.toggle("hidden");
-    color.classList.toggle("hidden");
-    resume.classList.toggle("slide");
   };
 
   componentDidMount() {
@@ -60,14 +49,12 @@ class App extends React.Component {
           Aliquip quis excepteur et nostrud enim irure nostrud officia."
           ></textarea>
           <br></br>
-          <div className="save">
-            <button onClick={this.collapse}>Save</button>
-          </div>
+          <SaveEdit class='save' label='Save'/>
         </form>
         <div className="resume-container">
           <Color />
           <div className="resume">{resume}</div>
-          <button className="hidden edit">Edit</button>
+          <SaveEdit class='edit hidden' label='Edit' />
         </div>
       </div>
     );

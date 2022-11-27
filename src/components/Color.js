@@ -2,14 +2,10 @@ import React from "react";
 import "../style.css";
 
 class Color extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   colorSwitch = (e) => {
     const coloredElements = document.querySelectorAll(".colored");
-    const button = getComputedStyle(e.target)
-    const selectedColor = button.getPropertyValue('background-color')
+    const button = getComputedStyle(e.target);
+    const selectedColor = button.getPropertyValue("background-color");
     console.log(selectedColor);
     coloredElements.forEach((element) => {
       if (element.nodeName === "DIV") {

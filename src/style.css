@@ -1,7 +1,7 @@
 .container {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  margin-left: 50px;
 }
 
 .resume {
@@ -86,6 +86,8 @@ button:not(.color > *):hover {
 
 .save {
   text-align: center;
+  margin-top: 5px;
+  margin-bottom: -5px;
 }
 
 .save > button {
@@ -172,7 +174,7 @@ span {
 }
 
 .slide {
-  transform: translate(-50%);
+  transform: translate(-42%);
 }
 
 .edit {

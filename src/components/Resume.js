@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-constructor */
 import React from "react";
 import ResumeExperience from "./ResumeExperience";
 import ResumeEducation from "./ResumeEducation";
@@ -8,9 +7,6 @@ import Email from "../images/email.svg";
 import Location from "../images/location.svg";
 
 class Resume extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const propsArray = [...this.props.values];
     const [name, title, email, phone, location, about] = propsArray;
