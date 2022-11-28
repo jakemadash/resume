@@ -20,8 +20,8 @@ class ResumeEducation extends React.Component {
                 <span className="institution">
                   {school.Institution.value || school.Institution.placeholder}
                 </span>{" "}
-                | {school.StartDate.value || 'Sept 2017'} -{" "}
-                {school.EndDate.value || 'May 2021'}
+                | {school.Started.value || 'Sept 2017'} -{" "}
+                {school.Graduated.value || 'May 2021'}
               </div>
             </div>
           );

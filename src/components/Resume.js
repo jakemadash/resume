@@ -18,7 +18,7 @@ class Resume extends React.Component {
         <div className="header colored">
           <div className="profile">
             <h1 className="colored">{name.value || name.placeholder}</h1>
-            <h3>{title.value || title.placeholder}</h3>
+            <h2>{title.value || title.placeholder}</h2>
           </div>
           <div className="header-right">
             <div className="icons">

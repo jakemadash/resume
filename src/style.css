@@ -54,6 +54,11 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  font-size: 1.17em;
+}
+
+h2,
 h3 {
   margin: 10px 0;
   font-weight: 200;
@@ -101,7 +106,9 @@ button:not(.color > *):hover {
 }
 
 #StartDate,
-#EndDate {
+#EndDate,
+#Started,
+#Graduated {
   width: 9rem;
   margin-right: 6px;
 }
@@ -138,6 +145,7 @@ button:not(.color > *):hover {
 
 img {
   height: 1rem;
+  width: 1rem;
 }
 
 p {
@@ -159,7 +167,7 @@ div.education {
 
 .company,
 .institution {
-  color: rgb(165, 165, 165);
+  color: rgb(129, 128, 128);
 }
 
 span {
@@ -279,7 +287,8 @@ div.education,
     z-index: -1;
   }
 
-  .resume, .form {
+  .resume,
+  .form {
     padding: 10px;
     border: none;
     height: min-content;
@@ -291,6 +300,6 @@ div.education,
 
   .color {
     flex-direction: row;
-    order: 3
+    order: 3;
   }
 }
