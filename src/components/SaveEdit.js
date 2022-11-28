@@ -7,10 +7,11 @@ class SaveEdit extends React.Component {
     super(props);
   }
 
-  smallTransition(resume, form) {
+  // small screen media query only
+  smallTransition(resume) {
+    resume.classList.toggle('stacked')
     if (resume.getAttribute("id") === "") {
       resume.setAttribute("id", "visible");
-      resume.removeAttribute("z-index");
     } else resume.setAttribute("id", "");
   }
 
@@ -36,7 +37,8 @@ class SaveEdit extends React.Component {
     const style = getComputedStyle(resume);
     this.toggleDisabled(form, resume);
 
-    if (style.getPropertyValue("position")) this.smallTransition(resume, form);
+    // check for small screen media query
+    if (style.getPropertyValue("position") === 'absolute') this.smallTransition(resume);
     else resume.classList.toggle("slide");
 
     form.classList.toggle("hidden");

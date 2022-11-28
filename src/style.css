@@ -260,6 +260,7 @@ div.education,
   .container {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 0;
   }
 
@@ -269,11 +270,13 @@ div.education,
     position: absolute;
     display: flex;
     flex-direction: column;
-    z-index: -1;
     top: 0;
-    right: .3rem;
     opacity: 0;
     transition: opacity 1s;
+  }
+
+  .stacked {
+    z-index: -1;
   }
 
   .resume, .form {
