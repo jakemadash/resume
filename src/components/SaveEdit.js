@@ -28,7 +28,6 @@ class SaveEdit extends React.Component {
   }
 
   transition = (e) => {
-    console.log("okay");
     e.preventDefault();
     const form = document.querySelector(".form");
     const resume = document.querySelector(".resume-container");

@@ -38,10 +38,13 @@ textarea {
   transition: opacity 1s;
 }
 
-input,
-textarea {
+input {
   width: 20rem;
   height: 1.5rem;
+}
+
+input,
+textarea {
   margin: 4px 0;
 }
 
@@ -74,8 +77,6 @@ h3.work,
 button {
   margin: 4px;
   color: rgb(72, 72, 72);
-  display: inline-block;
-  margin-left: 0;
   background-color: transparent;
   border-radius: 5px;
   border: 1px solid rgb(72, 72, 72);
@@ -170,10 +171,6 @@ div.education {
   color: rgb(129, 128, 128);
 }
 
-span {
-  font-weight: 500;
-}
-
 .hidden {
   opacity: 0;
 }
@@ -188,7 +185,6 @@ span {
 
 .edit {
   background-color: transparent;
-  text-align: center;
   font-size: 1rem;
   border-width: 2px;
   padding: 0;

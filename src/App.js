@@ -33,7 +33,7 @@ class App extends React.Component {
   }
 
   render() {
-    // make sure form values have loaded to feed into resume
+    // make sure form values have loaded so that they feed into resume
     let resume;
     if (this.state.formValues) {
       resume = <Resume values={this.state.formValues} />;
@@ -58,7 +58,7 @@ class App extends React.Component {
         <div className="resume-container stacked" id="">
           <Color />
           <div className="resume">{resume}</div>
-          <SaveEdit class="edit hidden nohover" label="Edit" state={this.state} />
+          <SaveEdit class="edit hidden nohover" label="Edit" />
         </div>
       </div>
     );
