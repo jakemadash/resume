@@ -58,7 +58,7 @@ class App extends React.Component {
         <div className="resume-container" id="">
           <Color />
           <div className="resume">{resume}</div>
-          <SaveEdit class="edit hidden" label="Edit" />
+          <SaveEdit class="edit hidden nohover" label="Edit" state={this.state} />
         </div>
       </div>
     );

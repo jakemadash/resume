@@ -7,30 +7,41 @@ class SaveEdit extends React.Component {
     super(props);
   }
 
-  smallTransition(resume) {
-    const style = getComputedStyle(resume);
-    if (style.getPropertyValue("opacity")) {
-      if (resume.getAttribute("id") === "")
-        resume.setAttribute("id", "visible");
-      else resume.setAttribute("id", "");
-    }
+  smallTransition(resume, form) {
+    if (resume.getAttribute("id") === "") {
+      resume.setAttribute("id", "visible");
+      resume.removeAttribute("z-index");
+    } else resume.setAttribute("id", "");
+  }
+
+  toggleDisabled(form, resume) {
+    const formElements = form.querySelectorAll("*");
+    const resumeElements = resume.querySelectorAll("button");
+    formElements.forEach((element) => {
+      element.toggleAttribute("disabled");
+      element.classList.toggle("nohover");
+    });
+    resumeElements.forEach((element) => {
+      element.classList.toggle("nohover");
+    });
   }
 
   transition = (e) => {
+    console.log("okay");
     e.preventDefault();
     const form = document.querySelector(".form");
-    const formElements = document.querySelectorAll(".form *");
     const resume = document.querySelector(".resume-container");
     const edit = document.querySelector(".edit");
     const color = document.querySelector(".color");
-    this.smallTransition(resume);
+    const style = getComputedStyle(resume);
+    this.toggleDisabled(form, resume);
+
+    if (style.getPropertyValue("position")) this.smallTransition(resume, form);
+    else resume.classList.toggle("slide");
+
     form.classList.toggle("hidden");
-    formElements.forEach((element) => {
-      element.toggleAttribute("disabled");
-    });
     edit.classList.toggle("hidden");
     color.classList.toggle("hidden");
-    resume.classList.toggle("slide");
   };
 
   render() {
@@ -45,7 +56,7 @@ class SaveEdit extends React.Component {
     // edit button
     else
       return (
-        <button className={this.props.class} onClick={this.transition}>
+        <button onClick={this.transition} className={this.props.class}>
           {this.props.label}
         </button>
       );

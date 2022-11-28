@@ -4,7 +4,8 @@
 }
 
 .resume {
-  min-height: 46rem;
+  min-height: min-content;
+  height: 46rem;
   padding: 30px 50px 50px;
   color: rgb(72, 72, 72);
   align-self: flex-start;
@@ -67,6 +68,8 @@ h3.work,
 
 button {
   margin: 4px;
+  color: rgb(72, 72, 72);
+  display: inline-block;
   margin-left: 0;
   background-color: transparent;
   border-radius: 5px;
@@ -177,8 +180,10 @@ span {
 
 .edit {
   background-color: transparent;
+  text-align: center;
   font-size: 1rem;
   border-width: 2px;
+  padding: 0;
 }
 
 .edit,
@@ -200,6 +205,10 @@ span {
 .color > *:hover {
   cursor: pointer;
   transform: scale(1.02);
+}
+
+.nohover {
+  pointer-events: none;
 }
 
 #gray {
@@ -254,25 +263,31 @@ div.education,
     margin: 0;
   }
 
-  .form {
-    height: min-content; 
-  }
-
   .resume-container {
     max-width: 100%;
+    box-sizing: border-box;
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
     top: 0;
-    right: 0;
+    right: .3rem;
     opacity: 0;
-    transition: opacity 1.5s 1s;
+    transition: opacity 1s;
   }
 
-  .resume,.form {
-    padding: 5px;
+  .resume, .form {
+    padding: 10px;
     border: none;
+    height: min-content;
   }
 
   #visible {
     opacity: 1;
+  }
+
+  .color {
+    flex-direction: row;
+    order: 3
   }
 }

@@ -21,12 +21,12 @@ class Color extends React.Component {
   render() {
     return (
       <div className="hidden color" onClick={this.colorSwitch}>
-        <button id="gray"></button>
-        <button id="red"></button>
-        <button id="blue"></button>
-        <button id="green"></button>
-        <button id="yellow"></button>
-        <button id="purple"></button>
+        <button id="gray" className="nohover"></button>
+        <button id="red" className="nohover"></button>
+        <button id="blue" className="nohover"></button>
+        <button id="green" className="nohover"></button>
+        <button id="yellow" className="nohover"></button>
+        <button id="purple" className="nohover"></button>
       </div>
     );
   }
