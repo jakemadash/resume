@@ -30,6 +30,7 @@ You can then use the command npm i to download the project's npm dependencies.
 Simply edit the form fields to populate your personal information, education, experience, and skills. Then, press save to see your finished resume. You can choose a color theme and edit the resume content at any time.
 
 ## License
+
   <details>
   
   
