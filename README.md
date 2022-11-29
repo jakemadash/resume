@@ -18,7 +18,7 @@
 
   ## Installation
 
-  To run this program simply clone the repo from GitHub using the following command:
+  To run this program, clone the repo from GitHub using the following command:
 
   ```
   git clone git@github.com:jakemadash/resume.git
@@ -35,6 +35,10 @@
   
   
   > ### GNU LESSER GENERAL PUBLIC LICENSE
+  <details>
+  
+  
+  <summary>GNU LESSER GENERAL PUBLIC LICENSE</summary>
   > Version 3, 29 June 2007
   > 
   > Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
