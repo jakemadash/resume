@@ -1,40 +1,35 @@
+# Resume Builder ![Project License Badge](https://img.shields.io/badge/license-GNU-brightgreen)
 
-  # Resume Builder  ![Project License Badge](https://img.shields.io/badge/license-GNU-brightgreen)
+## Description
 
-  ## Description
+A simple web app tool that allows users to design a professional resume using a modern template. Created with React, CSS, and HTML.
 
-  A simple web app tool that allows users to design a professional resume using a modern template. Created with React, CSS, and HTML.
+## Table of Contents
 
-  ## Table of Contents
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#license)
+- [Contributing](#Contributing)
+- [Tests](#Tests)
+- [Questions](#Questions)
 
-  * [Installation](#Installation)
-  * [Usage](#Usage)
-  * [License](#license)
-  * [Contributing](#Contributing)
-  * [Tests](#Tests)
-  * [Questions](#Questions)
+---
 
-  ***
+## Installation
 
-  ## Installation
+To run this program, clone the repo from GitHub using the following command:
 
-  To run this program, clone the repo from GitHub using the following command:
+```
+git clone git@github.com:jakemadash/resume.git
+```
 
-  ```
-  git clone git@github.com:jakemadash/resume.git
-  ```
+You can then use the command npm i to download the project's npm dependencies.
 
-  You can then use the command npm i to download the project's npm dependencies.   
+## Usage
 
-  ## Usage
+Simply edit the form fields to populate your personal information, education, experience, and skills. Then, press save to see your finished resume. You can choose a color theme and edit the resume content at any time.
 
-  Simply edit the form fields to populate your personal information, education, experience, and skills. Then, press save to see your finished resume. You can choose a color theme and edit the resume content at any time.
-
-  
-  ## License
-  
-  
-  > ### GNU LESSER GENERAL PUBLIC LICENSE
+## License
   <details>
   
   
@@ -204,24 +199,18 @@
   > apply, that proxy's public statement of acceptance of any version is
   > permanent authorization for you to choose that version for the
   > Library.
-    
+    </details>
 
-    
+## Contributing
 
-  ## Contributing
+Feel free to fork this repo and make it your own! If you think your changes could be widely used, submit a pull request! More info on how to do that can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
-  Feel free to fork this repo and make it your own! If you think your changes could be widely used, submit a pull request! More info on how to do that can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+## Tests
 
-  ## Tests
+## Questions
 
-  
-  
-  ## Questions
+If you have any questions about the project you can reach out to me via email or GitHub with the information below.
 
-  If you have any questions about the project you can reach out to me via email or GitHub with the information below. 
+> Email: jakemaddenashton@gmail.com
 
-  >Email: jakemaddenashton@gmail.com 
-
-  >GitHub : [jakemadash](https://github.com/jakemadash)
-
-  
+> GitHub : [jakemadash](https://github.com/jakemadash)
