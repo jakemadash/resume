@@ -18,7 +18,7 @@ class Input extends React.Component {
     const { value } = this.state.value;
     return (
       <>
-        <label htmlFor={this.props.label}></label>
+        <label htmlFor={this.props.label.replace(/\s+/g, '')}></label>
         <input
           onChange={this.handleChange}
           value={value}
