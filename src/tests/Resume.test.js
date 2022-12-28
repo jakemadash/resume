@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
-import App from '../../App'
+import App from '../App'
 
 describe("Resume component", () => {
   it("renders placeholder if no value, value otherwise", () => {

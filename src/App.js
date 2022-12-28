@@ -17,7 +17,6 @@ class App extends React.Component {
   stateUpdate = () => {
     const form = document.querySelector(".form");
     this.setState({ formValues: form.elements });
-    console.log(form.elements)
   };
 
   componentDidMount() {
