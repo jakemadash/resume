@@ -41,7 +41,7 @@ class App extends React.Component {
 
     return (
       <div className="container">
-        <form className="form" onChange={this.stateUpdate}>
+        <form className="form" aria-label="form" onChange={this.stateUpdate}>
           <Personal />
           <List label="Work History" place="jobs" />
           <List label="Education" place="schools" />
@@ -55,7 +55,7 @@ class App extends React.Component {
           <SaveEdit class="save" label="Save" />
         </form>
 
-        <div className="resume-container stacked" id="">
+        <div className="resume-container stacked" aria-label="resume" id="">
           <Color />
           <div className="resume">{resume}</div>
           <SaveEdit class="edit hidden nohover" label="Edit" />

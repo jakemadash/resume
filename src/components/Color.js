@@ -20,7 +20,11 @@ class Color extends React.Component {
 
   render() {
     return (
-      <div className="hidden color" onClick={this.colorSwitch}>
+      <div
+        className="hidden color"
+        aria-label="color"
+        onClick={this.colorSwitch}
+      >
         <button id="gray" aria-label="gray" className="nohover"></button>
         <button id="red" aria-label="red" className="nohover"></button>
         <button id="blue" aria-label="blue" className="nohover"></button>
