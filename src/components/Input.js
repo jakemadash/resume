@@ -16,8 +16,9 @@ class Input extends React.Component {
 
   render() {
     const { value } = this.state.value;
+    // replace method is to remove spaces
     return (
-      <>
+      <> 
         <label htmlFor={this.props.label.replace(/\s+/g, '')}></label>
         <input
           onChange={this.handleChange}
