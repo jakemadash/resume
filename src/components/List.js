@@ -50,7 +50,7 @@ class List extends React.Component {
       <>
         <span className={this.props.label}>
           <h3>{this.props.label}</h3>
-          <span>
+          <span aria-label={this.props.label}>
             {places.map((place) => {
               return (
                 <span key={place.id}>
