@@ -15,8 +15,8 @@ describe("Input component", () => {
   it("updates text value on change", () => {
     render(<Input label="Test Label" type="text" />);
     expect(screen.getByRole("textbox").value).toBe("");
-    screen.getByRole('textbox').focus() 
-    userEvent.keyboard('test');
-    expect(screen.getByRole("textbox").value).toBe("test"); 
+    screen.getByRole("textbox").focus();
+    userEvent.keyboard("test");
+    expect(screen.getByRole("textbox").value).toBe("test");
   });
 });

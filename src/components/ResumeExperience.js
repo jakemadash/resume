@@ -4,22 +4,22 @@ class ResumeExperience extends React.Component {
   render() {
     const entries = [...this.props.jobs];
     return (
-      <div>
+      <div aria-label="resume-experience">
         <h3 className="work colored">Work History</h3>
         {entries.map((entry, index) => {
           const job = entry.children;
           return (
-            <div key={index}>
+            <div key={index} aria-label="experience-entry">
               <div className="work">
-                <div className="position">
-                  {job.Position.value || 'Software Developer'}
+                <div className="position" aria-label="position">
+                  {job.Position.value || "Software Developer"}
                 </div>
                 <div>
                   <span className="company">
                     {job.Company.value || job.Company.placeholder}
                   </span>{" "}
-                  | {job.StartDate.value || 'Apr 2021'} -{" "}
-                  {job.EndDate.value || 'Dec 2022'}
+                  | {job.StartDate.value || "Apr 2021"} -{" "}
+                  {job.EndDate.value || "Dec 2022"}
                 </div>
               </div>
               <p>
