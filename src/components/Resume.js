@@ -4,15 +4,29 @@ import ResumeEducation from "./ResumeEducation";
 import "../style.css";
 import Phone from "../images/phone.svg";
 import Email from "../images/email.svg";
-import Location from "../images/location.svg";
+import Website from "../images/web.svg";
 
 class Resume extends React.Component {
   render() {
     const propsArray = [...this.props.values];
-    const [name, title, email, phone, location, about] = propsArray;
+    const [name, title, email, phone, website, about] = propsArray;
     const schools = document.querySelectorAll(".school");
     const jobs = document.querySelectorAll(".job");
     const skills = document.querySelector(".skills");
+
+    let url = "";
+    if (website.value) {
+      url = website.value.replace("https://", "");
+      url = url.replace("www.", "");
+      const shortURL = url;
+      url = `https://${url}`;
+      url = (
+        <a href={url} target="_blank" rel="noreferrer">
+          {shortURL}
+        </a>
+      );
+    } else url = "website.com";
+
     return (
       <div>
         <div className="header colored">
@@ -24,12 +38,12 @@ class Resume extends React.Component {
             <div className="icons">
               <img src={Phone} alt="phone" />
               <img src={Email} alt="email" />
-              <img src={Location} alt="location" />
+              <img src={Website} alt="website" />
             </div>
             <div className="contact">
               <div>{phone.value || "555-123-1234"}</div>
               <div>{email.value || "example@domain.com"}</div>
-              <div>{location.value || location.placeholder}</div>
+              <div>{url}</div>
             </div>
           </div>
         </div>

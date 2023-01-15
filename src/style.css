@@ -213,6 +213,11 @@ div.education {
   margin-top: 300px;
 }
 
+.buttons img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 .color > *:hover {
   cursor: pointer;
   transform: scale(1.02);

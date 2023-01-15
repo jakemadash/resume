@@ -6,6 +6,7 @@ import SaveEdit from "./components/SaveEdit";
 import Color from "./components/Color";
 import ReactToPrint, { PrintContextConsumer } from "react-to-print";
 import "./style.css";
+import Download from "./images/download.svg";
 
 class App extends React.Component {
   constructor(props) {
@@ -76,7 +77,7 @@ class App extends React.Component {
                     onClick={handlePrint}
                     className=" download hidden nohover"
                   >
-                    D
+                    <img src={Download} alt="download" />
                   </button>
                 )}
               </PrintContextConsumer>

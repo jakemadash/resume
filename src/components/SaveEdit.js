@@ -1,6 +1,7 @@
 /* eslint-disable no-useless-constructor */
 import React from "react";
 import "../style.css";
+import Edit from '../images/pencil.svg'
 
 class SaveEdit extends React.Component {
   constructor(props) {
@@ -60,7 +61,7 @@ class SaveEdit extends React.Component {
     else
       return (
         <button onClick={this.transition} className={this.props.class}>
-          {this.props.label}
+          <img src={Edit} alt="edit" />
         </button>
       );
   }
