@@ -5,7 +5,7 @@
 
 .resume {
   min-height: min-content;
-  height: 46rem;
+  min-height: 46rem;
   padding: 30px 50px 50px;
   color: rgb(72, 72, 72);
   align-self: flex-start;
@@ -128,7 +128,8 @@ button:not(.color > *):hover {
 .contact,
 .section,
 .icons,
-.color {
+.color,
+.buttons {
   display: flex;
   flex-direction: column;
 }
@@ -183,7 +184,7 @@ div.education {
   transform: translate(-42%);
 }
 
-.edit {
+.edit, .download {
   background-color: transparent;
   font-size: 1rem;
   border-width: 2px;
@@ -191,7 +192,8 @@ div.education {
 }
 
 .edit,
-.color > * {
+.color > *,
+.download {
   transition: opacity 1.5s 1s;
   height: 3rem;
   width: 3rem;
@@ -204,6 +206,11 @@ div.education {
 
 .color {
   transition: opacity 1.5s 1s;
+  margin-top: 200px;
+}
+
+.buttons {
+  margin-top: 300px;
 }
 
 .color > *:hover {
@@ -250,10 +257,28 @@ div.education,
 
 .resume-container {
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: min-content;
   gap: 10px;
   transition: transform 1.5s;
+}
+
+.print {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+
+/* .print img {
+ height: 1.5rem;
+ width: 1.5rem;
+} */
+
+@media print {
+  @page {
+    size: 30rem 46rem;
+    padding-top: 20px;
+  }
 }
 
 @media (max-width: 950px) {
@@ -287,15 +312,20 @@ div.education,
   .form {
     padding: 10px;
     border: none;
-    height: min-content;
+    min-height: min-content;
   }
 
   #visible {
     opacity: 1;
   }
 
-  .color {
+  .color, .buttons {
     flex-direction: row;
+    margin: auto;
+    text-align: center;
+  }
+
+  .color {
     order: 3;
   }
 }

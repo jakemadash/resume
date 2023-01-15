@@ -33,6 +33,7 @@ class SaveEdit extends React.Component {
     const resume = document.querySelector(".resume-container");
     const edit = document.querySelector(".edit");
     const color = document.querySelector(".color");
+    const download = document.querySelector('.download')
     const style = getComputedStyle(resume);
     this.toggleDisabled(form, resume);
 
@@ -43,6 +44,7 @@ class SaveEdit extends React.Component {
     form.classList.toggle("hidden");
     edit.classList.toggle("hidden");
     color.classList.toggle("hidden");
+    download.classList.toggle("hidden");
   };
 
   render() {
