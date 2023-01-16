@@ -6,7 +6,7 @@
 .resume {
   min-height: min-content;
   min-height: 46rem;
-  padding: 30px 50px 50px;
+  padding: 30px 40px;
   color: rgb(72, 72, 72);
   align-self: flex-start;
 }
@@ -53,6 +53,10 @@ textarea {
   height: 3rem;
 }
 
+.resume textarea {
+  border: none;
+}
+
 h1 {
   margin: 0;
 }
@@ -68,10 +72,18 @@ h3 {
 }
 
 h3.education,
+h3.work {
+  margin: 15px 0;
+}
+
+h3.education,
 h3.work,
 .skills > h3 {
   font-weight: 800;
-  margin: 15px 0;
+}
+
+.skills > h3 {
+  margin: 10px 0;
 }
 
 button {
@@ -153,6 +165,7 @@ img {
 p {
   font-size: 0.9rem;
   margin: 8px 0;
+  white-space: pre-wrap;
 }
 
 div.work,
@@ -184,7 +197,8 @@ div.education {
   transform: translate(-42%);
 }
 
-.edit, .download {
+.edit,
+.download {
   background-color: transparent;
   font-size: 1rem;
   border-width: 2px;
@@ -324,7 +338,8 @@ div.education,
     opacity: 1;
   }
 
-  .color, .buttons {
+  .color,
+  .buttons {
     flex-direction: row;
     margin: auto;
     text-align: center;

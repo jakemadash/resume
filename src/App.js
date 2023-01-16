@@ -52,12 +52,6 @@ class App extends React.Component {
           <Personal />
           <List label="Work History" place="jobs" />
           <List label="Education" place="schools" />
-          <h3>Skills</h3>
-          <textarea
-            className="skills"
-            placeholder="Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. 
-          Aliquip quis excepteur et nostrud enim irure nostrud officia."
-          ></textarea>
           <br></br>
           <SaveEdit class="save" label="Save" />
         </form>

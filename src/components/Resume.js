@@ -9,10 +9,9 @@ import Website from "../images/web.svg";
 class Resume extends React.Component {
   render() {
     const propsArray = [...this.props.values];
-    const [name, title, email, phone, website, about] = propsArray;
+    const [name, title, email, phone, website, skills, about] = propsArray;
     const schools = document.querySelectorAll(".school");
     const jobs = document.querySelectorAll(".job");
-    const skills = document.querySelector(".skills");
 
     let url = "";
     if (website.value) {
@@ -26,6 +25,12 @@ class Resume extends React.Component {
         </a>
       );
     } else url = "website.com";
+
+    let emailAddress = "";
+    if (email.value) {
+      const mailTo = `mailto:${email.value}`;
+      emailAddress = <a href={mailTo}>{email.value}</a>;
+    } else emailAddress = "example@domain.com";
 
     return (
       <div>
@@ -42,7 +47,7 @@ class Resume extends React.Component {
             </div>
             <div className="contact">
               <div>{phone.value || "555-123-1234"}</div>
-              <div>{email.value || "example@domain.com"}</div>
+              <div>{emailAddress}</div>
               <div>{url}</div>
             </div>
           </div>
@@ -50,12 +55,13 @@ class Resume extends React.Component {
         <div className="skills">
           <h3 className="colored">Skills</h3>
           <p>
-            {skills.value ||
+            {`${skills.value}` ||
               "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia. Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
           </p>
+          <h3 className="colored">About</h3>
         </div>
         <p>
-          {about.value ||
+          {`${about.value}` ||
             "Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia. Cupidatat sunt anim incididunt nisi labore sunt null Lorem elit irure. Aliquip quis excepteur et nostrud enim irure nostrud officia."}
         </p>
 
