@@ -60,7 +60,7 @@ class SaveEdit extends React.Component {
     // edit button
     else
       return (
-        <button onClick={this.transition} className={this.props.class}>
+        <button onClick={this.transition} className={this.props.class} aria-label='Edit'>
           <img src={Edit} alt="edit" />
         </button>
       );

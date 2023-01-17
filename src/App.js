@@ -70,6 +70,7 @@ class App extends React.Component {
                   <button
                     onClick={handlePrint}
                     className=" download hidden nohover"
+                    aria-label="Download"
                   >
                     <img src={Download} alt="download" />
                   </button>
