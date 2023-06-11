@@ -5,11 +5,11 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
-import App from "../App";
+import Home from "../views/Home";
 
 describe("Color component", () => {
   it("changes color of all applicable elements when color button pressed", () => {
-    const { container } = render(<App />);
+    const { container } = render(<Home />);
     const coloredElements = container.querySelectorAll(".colored");
     const redButton = screen.getByRole("button", { name: "red" });
     const buttonStyle = getComputedStyle(redButton);

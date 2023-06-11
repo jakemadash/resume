@@ -3,11 +3,11 @@ import React from "react";
 import { render, screen, within, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
-import App from "../App";
+import Home from "../views/Home";
 
 describe("ResumeExperience component", () => {
   it("renders placeholder value if no value from props, value otherwise", () => {
-    render(<App />);
+    render(<Home />);
     expect(screen.getByRole("generic", { name: "position" }).textContent).toBe(
       "Software Developer"
     );
@@ -19,7 +19,7 @@ describe("ResumeExperience component", () => {
   });
 
   it("renders same number of component sections as corresponding form element", async () => {
-    render(<App />);
+    render(<Home />);
     // form element
     const experience = screen.getByRole("generic", { name: "Work History" });
     // resume element

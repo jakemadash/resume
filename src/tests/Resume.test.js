@@ -3,11 +3,11 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import "@testing-library/jest-dom";
-import App from "../App";
+import Home from "../views/Home";
 
 describe("Resume component", () => {
   it("renders placeholder if no value, value otherwise", () => {
-    render(<App />);
+    render(<Home />);
     expect(screen.getByRole("heading", { level: 1 }).textContent).toMatch(
       "Full Name"
     );

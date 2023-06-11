@@ -4,11 +4,11 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
-import App from "../App";
+import Home from "../views/Home";
 
 describe("SaveEdit component", () => {
   it("toggles hidden class on applicable elements when save or edit button clicked", () => {
-    render(<App />);
+    render(<Home />);
     const hideableElements = [
       screen.getByRole("button", { name: "Edit" }),
       screen.getByRole("generic", { name: "color" }),
@@ -35,7 +35,7 @@ describe("SaveEdit component", () => {
   });
 
   it("toggles disabled attribute and nohover class on applicable elements when save or edit button clicked", () => {
-    render(<App />);
+    render(<Home />);
     const form = screen.getByRole("form");
     const resume = screen.getByRole("generic", { name: "resume" });
     const formElements = form.querySelectorAll("*");

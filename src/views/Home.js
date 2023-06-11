@@ -1,14 +1,14 @@
 import React from "react";
-import Personal from "./components/Personal";
-import List from "./components/List";
-import Resume from "./components/Resume";
-import SaveEdit from "./components/SaveEdit";
-import Color from "./components/Color";
+import Personal from "../components/Personal";
+import List from "../components/List";
+import Resume from "../components/Resume";
+import SaveEdit from "../components/SaveEdit";
+import Color from "../components/Color";
 import ReactToPrint, { PrintContextConsumer } from "react-to-print";
-import "./style.css";
-import Download from "./images/download.svg";
+import "../style.css";
+import Download from "../images/download.svg";
 
-class App extends React.Component {
+class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -84,4 +84,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Home;
